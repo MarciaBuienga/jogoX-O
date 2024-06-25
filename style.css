@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Permanent Marker", cursive;
+}
+
+body{
+    background-color: #011f3c;
+}
+
+.celula{
+    width: 80px;
+    height: 80px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+#reiniciarBotao{
+    width: 130px;
+    padding: 8px;
+    margin-top: 6px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: none;
+}
+
+#reiniciarBotao:hover{
+    cursor: pointer;
+    color: #011f3c;
+}
+
+.container{
+    text-align: center;
+}
+
+h1, h2{
+    color: #fff;
+}
+
+h1{
+    margin-top: 40px;
+    font-size: 2rem;
+}
+
+#celulaContainer{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    margin: 15px auto;
+}
+
+.cross {
+    background-color: lightgreen;
+    position: relative;
+}
+
+.cross::before, .cross::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #011f3c;
+    top: 0;
+    left: 50%;
+    transform: rotate(45deg);
+    transform-origin: center;
+}
+
+.cross::after {
+    transform: rotate(90deg);
+}
+
